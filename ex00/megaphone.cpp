@@ -1,6 +1,6 @@
 #include <iostream>
 
-//forbidden namespace and friend keyword
+// forbidden namespace and friend keyword
 // not allow to use STL for now
 // you must avoid the problem of double 
 // inclusion by adding include guards.

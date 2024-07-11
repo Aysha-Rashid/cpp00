@@ -2,12 +2,13 @@ NAME= phonebook
 
 SRC= main.cpp\
 	SetterGetter.cpp\
+	Contact.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
 
-CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 $(NAME): $(OBJ)
 	@ $(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)

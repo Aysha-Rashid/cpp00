@@ -1,18 +1,24 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
+#include <string.h>
+#include <stdlib.h>
 #include <iostream>
-#include <stdio.h>
+#include <iomanip>
 #include "Contact.hpp"
 
 class PhoneBook
 {
-    private:
-        Contact contact[8];
-    public:
-        int	PhoneBook::add();
-        void	PhoneBook::search(std::string word);
-        void    DisplaySearch();
+	private:
+		Contact contact[8];
+		int index;
+
+	public:
+		int add();
+		void search(std::string word);
+		void displayContact(int index);
+		void Setindex(int Setindex);
+		int GetIndex();
 };
 
-#endif // PHONEBOOK_HPP
+#endif
