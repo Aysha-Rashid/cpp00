@@ -6,7 +6,7 @@ OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
 
-CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 $(NAME): $(OBJ)
 	@ $(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
@@ -14,11 +14,11 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	@rm -rf $(OBJ)
+	rm -rf $(OBJ)
 	@echo "Cleaned all 'o' files successfully"
 
 fclean: clean
-	@rm -rf $(NAME)
+	rm -rf $(NAME)
 	@echo "Cleaned Program name successfully"
 
 re: fclean all

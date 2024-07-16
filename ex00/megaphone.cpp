@@ -1,9 +1,6 @@
 #include <iostream>
 
 // forbidden namespace and friend keyword
-// not allow to use STL for now
-// you must avoid the problem of double 
-// inclusion by adding include guards.
 
 void ft_change(char *str)
 {
@@ -33,7 +30,6 @@ int main(int argc, char **argv)
 	while (argv[i])
 	{
 		ft_change(argv[i]);
-
 		i++;
 	}
 	std::cout << std::endl;

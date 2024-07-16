@@ -1,3 +1,5 @@
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 #include "PhoneBook.hpp"
 
 class Contact
@@ -20,3 +22,5 @@ class Contact
 		void		SetDarkestSecret(std::string Secret);
 		std::string GetDarkestSecret();
 };
+
+#endif

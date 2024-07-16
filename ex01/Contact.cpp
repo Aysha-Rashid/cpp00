@@ -8,6 +8,8 @@ int valid_phone(void)
 
 	std::cout << "Enter the PhoneNumber: " << std::flush;
 	std::getline(std::cin >> std::ws, PhoneNumber);
+	if (PhoneNumber == "EXIT")
+		return (2);
 	if (list.SetPhoneNumber(PhoneNumber))
 		std::cout << "\033[0;35mPhone Number set to: \033[0m" << list.GetPhoneNumber() << std::endl;
 	else
@@ -43,10 +45,14 @@ int	PhoneBook::add()
 		return (1);
 	list.SetNickName(NickName);
 	std::cout << "\033[0;35mNickName set to: \033[0m" << list.GetNickName() << std::endl;
+	int ret_value = 0;
 	while (1)
 	{
-		if (valid_phone())
+		ret_value = valid_phone();
+		if (ret_value == 1)
 			break ;
+		else if (ret_value == 2)
+			return (1);
 	}
 	std::cout << "Enter the DarkestSecret: " << std::flush;
 	std::getline(std::cin >> std::ws, DarkestSecret);
